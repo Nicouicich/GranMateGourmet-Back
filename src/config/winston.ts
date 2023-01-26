@@ -35,7 +35,8 @@ const logConfiguration = {
     colorize(),
     printf((info) => `${info.level} | ${[info.timestamp]} | ${info.message}`)
   ),
-  transports: [new transports.File({filename: `./logs/${monthName}/${day}.log`, level: 'debug'})],
+  transports: [new transports.File({filename: `./logs/${monthName}/${day}.log`, level: 'debug'}),
+  new transports.Console({level: 'info'})],
 };
 
 export const logger = createLogger(logConfiguration);

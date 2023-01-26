@@ -8,6 +8,6 @@ const router = Router();
 const specs = swaggerJsDoc(swaggerOptions);
 
 router.use('/docs', swaggerUI.serve, swaggerUI.setup(specs));
-router.get('/user', userRouter);
+router.use('/user', userRouter);
 
 export {router};

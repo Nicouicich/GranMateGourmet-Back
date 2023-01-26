@@ -1,7 +1,6 @@
 import {config} from "./config";
 import path from 'path';
 
-console.log(path.join(__dirname, "./modules/**/*.routes.ts"));
 export const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
