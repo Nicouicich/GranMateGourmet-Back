@@ -2,35 +2,19 @@ import {config} from "./config";
 import path from 'path';
 
 console.log(path.join(__dirname, "./modules/**/*.routes.ts"));
-// export const swaggerOptions = {
-//     definition: {
-//         openapi: "3.0.0",
-//         info: {
-//             title: "Gran Mate Gourmet API",
-//             version: '1.0.0',
-//             description: "Library"
-//         },
-//         servers: [
-//             {
-//                 url: `http://localhost:${config.PORT}`
-//             }
-//         ],
-//     },
-//     apis: [`${path.join(__dirname, "../**/**/*.routes.ts")}`],
-// };
 export const swaggerOptions = {
-    definition: {
-      openapi: "3.0.0",
-      info: {
-        title: "Tasks API",
-        version: "1.0.0",
-        description: "A simple express library API",
-      },
-      servers: [
-        {
-          url: `http://localhost:${config.PORT}`,
-        },
-      ],
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Gran Mate Gourmet API",
+      version: '1.0.0',
+      description: "Library"
     },
-    apis: [`${path.join(__dirname, "../**/**/*.routes.ts")}`],
-  };
+    servers: [
+      {
+        url: `http://localhost:${config.PORT}`
+      }
+    ],
+  },
+  apis: [`${path.join(__dirname, "../**/**/*.routes.ts")}`],
+};

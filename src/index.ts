@@ -1,3 +1,9 @@
 import {initServer} from "./app";
+import {initMongoDB} from "./services/db";
 
-initServer();
+const init = async () => {
+    await initMongoDB();
+    initServer();
+};
+
+init();
