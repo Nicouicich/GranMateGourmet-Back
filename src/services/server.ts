@@ -14,5 +14,4 @@ app.use('/api', mainRouter);
 
 const server = new http.Server(app);
 
-
 export default server;

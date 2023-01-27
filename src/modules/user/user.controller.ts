@@ -5,10 +5,9 @@ import {logger} from "../../config/winston";
 export class UserController {
 
     static getUsers = async (req: Request, res: Response) => {
-        console.log("hola");
         // await UserModel.find({})
         try {
-            res.send("data");
+            res.status(200).send({nombre: "Nicolas"});
         } catch (e) {
             logger.error(e + "Error while fetching users");
         }

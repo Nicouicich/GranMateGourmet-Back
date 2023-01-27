@@ -1,11 +1,10 @@
 import request from 'supertest';
-import {initServer} from '../../app';
+import server from '../../services/server';
 
 describe('GET - Users', () => {
-    it('Should', async () => {
-        const expected = 'User created';
-        const response = await request(initServer).get('/api/user')
-        console.log(response);
-        expect(expected).toStrictEqual(expected);
+    test('Should', async () => {
+        const expected = 'Nicolas';
+        const response = await request(server).get('/api/user').expect(200).send()
+        expect(response.body.nombre).toStrictEqual(expected);
     });
 });
